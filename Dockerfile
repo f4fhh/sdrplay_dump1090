@@ -8,7 +8,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
-FROM debian:stretch-slim as builder
+FROM base as builder
 
 ENV MAJVERS 2.13
 ENV MINVERS .1
