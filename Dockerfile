@@ -35,6 +35,8 @@ RUN wget -O - https://www.sdrplay.com/software/dump1090_1.3.1.linux.tar.gz | tar
 FROM base
 
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
+# Workaround a docker bug with 2 consecutive COPY
+RUN true
 COPY --from=builder /usr/local/lib/ /usr/local/lib/
 RUN ldconfig
 WORKDIR /usr/local/lib/dump1090
