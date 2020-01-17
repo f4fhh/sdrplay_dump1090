@@ -8,6 +8,8 @@ It works with compatible devices including:
 * Any RTLSDR USB device
 * Any network AVR or BEAST device
 
+This image is built from the dump1090 binary available at the [SDRPlay](https://www.sdrplay.com/downloads/) site. The sources are available at [SDRplay/dump1090](https://github.com/SDRplay/dump1090).
+
 # Container Setup
 
 Ensure you pass your USB device path.
