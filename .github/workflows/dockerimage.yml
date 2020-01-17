@@ -11,4 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sdrplay_dump1090:$(date +%s)
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: f4fhh/sdrplay_dump1090
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
