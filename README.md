@@ -1,7 +1,9 @@
 # sdrplay_dump1090
-Docker container for ADS-B - This is the flightaware dump1090 component
+Docker container for ADS-B and SDRPlay devices
 
-This is part of a suite of applications that can be used to feed ADSB data with compatible devices including:
+This docker container can be used to feed data to ADS-B applications like flightradar24, flightaware, radarbox24, virtualradar server, etc. It is a direct replacement of [ShoGinn/dump1090](https://github.com/ShoGinn/dump1090) for SDRPlay devices and could be used with the [ShoGinn](https://github.com/ShoGinn) suite of ADS-B applications.
+
+It works with compatible devices including:
 * RSP1, RSP1A, RSP2, RSPDuo (single tuner mode) SDRPlay devices
 * Any RTLSDR USB device
 * Any network AVR or BEAST device
@@ -23,7 +25,7 @@ Also make sure you add the capability ```--cap-add=SYS_NICE``` otherwise you wil
 ```
 docker run -d \
 --restart unless-stopped \
---name='dump1090' \
+--name='sdrplay_dump1090' \
 --cap-add=SYS_NICE \
 --device=/dev/bus/usb \
 f4fhh/sdrplay_dump1090
@@ -33,3 +35,4 @@ f4fhh/sdrplay_dump1090
 
 ### Credits
  - [SDRPlay](https://github.com/SDRplay) for the SDK of the RSP devices
+ - [ShoGinn](https://github.com/ShoGinn) for the suite of ADS-B applications
