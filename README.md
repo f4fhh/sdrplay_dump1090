@@ -1,3 +1,9 @@
+## From 2020-1-20 sdrplay_dump1090 development is discontinued.
+
+I would like to say big thanks to everyone who supported me during this project.
+
+Please go to the repository of [chimbosonic](https://github.com/chimbosonic/dump1090-container) who made a better and updated container.
+
 # sdrplay_dump1090
 Docker container for ADS-B and SDRPlay devices
 
